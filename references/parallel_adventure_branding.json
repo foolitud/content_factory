@@ -1,0 +1,118 @@
+{
+  "branding": {
+    "colorScheme": "light",
+    "fonts": [
+      {
+        "family": "ui-sans-serif",
+        "count": 69
+      },
+      {
+        "family": "system-ui",
+        "count": 69
+      },
+      {
+        "family": "sans-serif",
+        "count": 69
+      },
+      {
+        "family": "Apple Color Emoji",
+        "count": 69
+      },
+      {
+        "family": "Segoe UI Emoji",
+        "count": 69
+      },
+      {
+        "family": "Segoe UI Symbol",
+        "count": 69
+      },
+      {
+        "family": "Noto Color Emoji",
+        "count": 69
+      }
+    ],
+    "colors": {
+      "primary": "#081E22",
+      "accent": "#DEE9ED",
+      "background": "#0A1014",
+      "textPrimary": "#0A1014",
+      "link": "#B8CCE0"
+    },
+    "typography": {
+      "fontFamilies": {
+        "primary": "ui-sans-serif",
+        "heading": "ui-sans-serif"
+      },
+      "fontStacks": {
+        "body": [
+          "ui-sans-serif",
+          "system-ui",
+          "sans-serif",
+          "Apple Color Emoji",
+          "Segoe UI Emoji",
+          "Segoe UI Symbol",
+          "Noto Color Emoji"
+        ],
+        "heading": [
+          "ui-sans-serif",
+          "system-ui",
+          "sans-serif",
+          "Apple Color Emoji",
+          "Segoe UI Emoji",
+          "Segoe UI Symbol",
+          "Noto Color Emoji"
+        ],
+        "paragraph": [
+          "ui-sans-serif",
+          "system-ui",
+          "sans-serif",
+          "Apple Color Emoji",
+          "Segoe UI Emoji",
+          "Segoe UI Symbol",
+          "Noto Color Emoji"
+        ]
+      },
+      "fontSizes": {
+        "h1": "72px",
+        "h2": "36px",
+        "body": "20px"
+      }
+    },
+    "spacing": {
+      "baseUnit": 8,
+      "borderRadius": "0px"
+    },
+    "components": {
+      "buttonPrimary": {
+        "background": "#DEE9ED",
+        "textColor": "#0B1114",
+        "borderRadius": "12px",
+        "borderRadiusCorners": {
+          "topLeft": "12px",
+          "topRight": "12px",
+          "bottomRight": "12px",
+          "bottomLeft": "12px"
+        },
+        "shadow": "none"
+      },
+      "buttonSecondary": {
+        "background": "#081E22",
+        "textColor": "#F8FAFC",
+        "borderRadius": "0px",
+        "borderRadiusCorners": {
+          "topLeft": "0px",
+          "topRight": "0px",
+          "bottomRight": "0px",
+          "bottomLeft": "0px"
+        },
+        "shadow": "none"
+      }
+    },
+    "images": {
+      "logo": "https://www.parallel-adventure.com/logos/logo.svg",
+      "favicon": "https://www.parallel-adventure.com/favicons/favicon-57x57.png",
+      "ogImage": null,
+      "logoHref": "/"
+    }
+  }
+}

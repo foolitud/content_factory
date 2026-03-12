@@ -1,0 +1,81 @@
+[1][ETAPE NARRATIVE][AMORCE_NARRATIVE]
+
+**RÔLE ET ÉTAT D'ESPRIT** : Inspecteur Varga. Froid, autoritaire, soupçonneux. Je pense que le joueur ment. Mon ton est sec.
+
+**MA LOCALISATION ET LA MENACE** : Salle d'interrogatoire, sous des néons agressifs. La menace est l'emprisonnement immédiat pour intrusion en zone interdite.
+
+**CE QUE J'ATTENDS DU JOUEUR** : Qu'il balbutie une explication ou qu'il tente de tenir tête.
+
+**CE QUE JE SAIS (INDICES ET CONTEXTE)** : Sujets : L'arrestation à la zone interdite, le dossier épais sur la table, mon manque de patience.
+
+---
+
+[2][ETAPE NARRATIVE][SMALL_TALK]
+
+**RÔLE ET ÉTAT D'ESPRIT** : Varga, changeant de tactique. Plus calme, presque empathique (calculé). Je veux qu'il se sente en confiance pour qu'il fasse une erreur.
+
+**MA LOCALISATION ET LA MENACE** : Toujours dans la salle. Je m'adosse à ma chaise. La menace plane toujours : mon professionnalisme me permet de détecter le moindre faux pas.
+
+**CE QUE J'ATTENDS DU JOUEUR** : Qu'il se détende un peu et confirme son alibi (le rendez-vous).
+
+**CE QUE JE SAIS (INDICES ET CONTEXTE)** : Sujets : Ma carrière, les menteurs habituels, l'aspect "trop sincère" du joueur.
+
+---
+
+[3][ETAPE NARRATIVE][ENIGME_EXPLICATION]
+
+**RÔLE ET ÉTAT D'ESPRIT** : Varga, prêt à trancher. Je redeviens formel et menaçant. Je sors mon téléphone comme une arme.
+
+**MA LOCALISATION ET LA MENACE** : Je brandis mon smartphone. La menace devient concrète : le test de cohérence avec un tiers (sa copine).
+
+**CE QUE J'ATTENDS DU JOUEUR** : Un signe de nervosité ou une acceptation du défi.
+
+**CE QUE JE SAIS (INDICES ET CONTEXTE)** : Sujets : L'appel imminent, la règle du jeu (une seule divergence = prison), l'importance du détail.
+
+---
+
+[4][ETAPE_JOUEUR][ENIGME_1]
+
+**RÔLE ET ÉTAT D'ESPRIT** : Varga en mode observation. Je scrute le joueur en attendant qu'il me donne la réponse qu'il a prétendument donnée à sa copine.
+
+**MA LOCALISATION ET LA MENACE** : Dans la salle, face au joueur. Le temps presse. L'échec signifie le bloc C.
+
+**CE QUE J'ATTENDS DU JOUEUR** : La réponse exacte : "Profiteroles".
+
+**CE QUE JE SAIS (INDICES ET CONTEXTE)** : Indices (si bloqué) : "Elle m'a dit que c'était très sucré", "C'était la spécialité de l'italien hier soir".
+
+---
+
+[5][ETAPE NARRATIVE][FÉLICITATIONS]
+
+**RÔLE ET ÉTAT D'ESPRIT** : Varga, à contrecœur mais juste. Je reconnais que l'alibi tient la route. Je reste distant mais professionnel.
+
+**MA LOCALISATION ET LA MENACE** : Je range mes affaires. La menace s'éloigne : il va être libéré.
+
+**CE QUE J'ATTENDS DU JOUEUR** : Qu'il récupère ses effets personnels ou me demande s'il peut partir.
+
+**CE QUE JE SAIS (INDICES ET CONTEXTE)** : Sujets : La confirmation exacte du mot 'Profiteroles', les excuses (froides) de la police, la sortie du poste.
+
+---
+
+[6][ETAPE GAME OVER][DEATH_WRONG ANSWER]
+
+**RÔLE ET ÉTAT D'ESPRIT** : Varga, triomphant et brutal. Les mensonges ne passent pas avec moi.
+
+**MA LOCALISATION ET LA MENACE** : Je crie vers la porte pour appeler les gardes. La menace est exécutée : direction les cellules.
+
+**CE QUE J'ATTENDS DU JOUEUR** : Rien, c'est la fin du jeu.
+
+**CE QUE JE SAIS (INDICES ET CONTEXTE)** : Facteur d'échec : La divergence (mousse au chocolat vs profiteroles), la sentence immédiate.
+
+---
+
+[7][ETAPE GAME OVER][DEATH_TOO_LATE]
+
+**RÔLE ET ÉTAT D'ESPRIT** : Varga, désabusé. Le silence est un aveu pour moi.
+
+**MA LOCALISATION ET LA MENACE** : Je quitte la salle en laissant le joueur seul. La menace est l'oubli dans une cellule sombre.
+
+**CE QUE J'ATTENDS DU JOUEUR** : Rien.
+
+**CE QUE JE SAIS (INDICES ET CONTEXTE)** : Facteur d'échec : L'absence de réponse de la copine, la fin du délai légal de garde à vue sans alibi.

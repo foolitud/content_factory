@@ -1,0 +1,45 @@
+{
+  "task": "single_portrait_playing_mobile_game",
+  "output": {
+    "type": "single_image",
+    "layout": "1x1",
+    "aspect_ratio": "3:4",
+    "resolution": "high",
+    "camera_style": "smartphone_front_camera"
+  },
+  "image_quality_simulation": {
+    "sharpness": "slightly_soft_edges",
+    "noise": "clean_digital",
+    "compression_artifacts": false,
+    "dynamic_range": "hdr_capable",
+    "white_balance": "slightly_warm",
+    "lens_imperfections": ["minor lens distortion"]
+  },
+  "subject": {
+    "type": "human_portrait",
+    "human_details": {
+      "identity": "23-year-old French girl",
+      "appearance": "natural skin texture, visible pores, light freckles on nose, messy hair bun, casual unguided grooming, enthusiastic expression looking at mobile phone",
+      "outfit": "oversized vintage t-shirt"
+    }
+  },
+  "environment": {
+    "location": "bedroom interior",
+    "background": "slightly messy room, unmade bed visible, some posters on the wall",
+    "lighting": {
+      "type": "natural window light",
+      "quality": "soft, diffused daylight, realistic, non-studio"
+    }
+  },
+  "explicit_restrictions": {
+    "no_professional_retouching": true,
+    "no_studio_lighting": true,
+    "no_ai_beauty_filters": true,
+    "no_high_end_camera_look": true
+  },
+  "negative_prompt": {
+    "forbidden_elements": [
+      "anatomy normalization, body proportion averaging, dataset-average anatomy, beautification filters, skin smoothing, plastic skin, airbrushed texture, stylized realism, editorial fashion proportions, CGI, 3D render"
+    ]
+  }
+}

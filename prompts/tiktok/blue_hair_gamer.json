@@ -1,0 +1,48 @@
+{
+  "task": "cinematic_gamer_vertical_clip",
+  "output": {
+    "type": "single_clip",
+    "duration": "5s",
+    "framerate": "24fps_cinematic",
+    "resolution": "1080p",
+    "aspect_ratio": "9:16"
+  },
+  "cinematography": {
+    "camera_motion": "slow_push_in_towards_the_monitors",
+    "lens_and_focus": "85mm_lens_shallow_depth_of_field_focus_on_the_subject's_blue_hair",
+    "simulation": {
+      "motion_blur": "natural_180_degree_shutter",
+      "noise_over_time": "subtle_film_grain"
+    }
+  },
+  "subject": {
+    "type": "human_actor",
+    "appearance": "Woman seen from behind, sitting in a gaming chair. Long, vibrant blue hair with natural texture and subtle waves. Wearing a comfortable oversized hoodie. Her hands are on a keyboard and mouse.",
+    "movement_timeline": [
+      {
+        "timeframe": "0s-5s",
+        "action": "The woman is focused on the screens, her head moves slightly as she tracks something on the display. Subtle finger movements on the mouse."
+      }
+    ]
+  },
+  "environment": {
+    "location": "A cozy gaming room with soft ambient RGB lighting. Multiple large monitors are arranged on the desk.",
+    "background_dynamics": "The screens display a clean, modern news website with prominent headlines and images, reminiscent of a professional news portal. Soft blue and purple ambient light from the PC case.",
+    "lighting": {
+      "type": "balanced_lighting_from_the_monitors_reflecting_on_the_subject",
+      "changes_over_time": "lighting remains consistent with subtle flickering from the digital content on the screens"
+    }
+  },
+  "structural_preservation": {
+    "temporal_consistency": [
+      "Blue hair color and texture must remain constant",
+      "Monitors layout and screen content must not morph",
+      "Hand movements must be anatomically correct"
+    ]
+  },
+  "negative_prompt": {
+    "forbidden_elements": [
+      "morphing, melting geometry, extra limbs, jittery background, plastic skin, anime style, CGI rendering, inconsistent lighting, distorted screens"
+    ]
+  }
+}

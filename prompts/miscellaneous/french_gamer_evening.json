@@ -1,0 +1,45 @@
+{
+  "task": "single_portrait_playing_mobile_game",
+  "output": {
+    "type": "single_image",
+    "layout": "1x1",
+    "aspect_ratio": "16:9",
+    "resolution": "high",
+    "camera_style": "mirrorless_camera"
+  },
+  "image_quality_simulation": {
+    "sharpness": "tack_sharp",
+    "noise": "subtle_sensor_noise",
+    "compression_artifacts": false,
+    "dynamic_range": "limited",
+    "white_balance": "warm_tungsten",
+    "lens_imperfections": ["subtle vignetting"]
+  },
+  "subject": {
+    "type": "human_portrait",
+    "human_details": {
+      "identity": "23-year-old French girl",
+      "appearance": "natural unretouched skin, subtle dark circles under eyes, focused intense expression, holding smartphone horizontally with both hands, thumbs on screen",
+      "outfit": "cozy hoodie"
+    }
+  },
+  "environment": {
+    "location": "darkened bedroom interior",
+    "background": "blurred background, string fairy lights, desk lamp glow",
+    "lighting": {
+      "type": "screen glow and ambient room light",
+      "quality": "high-contrast dramatic, blue light from phone screen highlighting face"
+    }
+  },
+  "explicit_restrictions": {
+    "no_professional_retouching": true,
+    "no_studio_lighting": true,
+    "no_ai_beauty_filters": true,
+    "no_high_end_camera_look": false
+  },
+  "negative_prompt": {
+    "forbidden_elements": [
+      "anatomy normalization, beautification filters, skin smoothing, plastic skin, anime style, 3D render, cartoon, exaggerated features, over-brightened shadows"
+    ]
+  }
+}

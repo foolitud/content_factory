@@ -1,0 +1,54 @@
+{
+  "task": "vertical_tiktok_gameplay_intense",
+  "output": {
+    "type": "single_clip",
+    "duration": "10_seconds",
+    "framerate": "60fps_smooth_action",
+    "resolution": "1080p",
+    "aspect_ratio": "9:16"
+  },
+  "cinematography": {
+    "camera_motion": "slow_pan_right_to_left_with_handheld_shake",
+    "lens_and_focus": "smartphone_front_camera_lens",
+    "dynamic_range": "hdr_capable",
+    "simulation": {
+      "motion_blur": "natural_180_degree_shutter",
+      "noise_over_time": "consistent_film_grain_across_frames"
+    }
+  },
+  "subject": {
+    "type": "human_actor",
+    "appearance": "23-year-old French female, casual gaming outfit, slight frustration on face, holding a smartphone vertically with both hands",
+    "movement_timeline": [
+      {
+        "timeframe": "0s-4s",
+        "action": "Subject bites her lower lip in intense concentration while tapping the screen rhythmically"
+      },
+      {
+        "timeframe": "4s-10s",
+        "action": "Subject gasps slightly and her eyes widen in surprise at an unexpected in-game event, while fingers maintain grip on the phone"
+      }
+    ]
+  },
+  "environment": {
+    "location": "dimly_lit_room_with_neon_accents",
+    "background_dynamics": "soft out-of-focus neon lights pulsing gently in the background",
+    "lighting": {
+      "type": "dramatic_rgb_lighting",
+      "changes_over_time": "purple and blue neon lights slowly sweep across the subject's face mimicking screen flashes"
+    }
+  },
+  "structural_preservation": {
+    "temporal_consistency": [
+      "Subject facial features must remain consistent without melting",
+      "Hands tracking and finger positions must strictly match natural physics",
+      "Smartphone geometry must stay perfectly rectangular",
+      "No physics-defying liquid behavior"
+    ]
+  },
+  "negative_prompt": {
+    "forbidden_elements": [
+      "morphing, melting geometry, extra limbs appearing, impossible physics, jittery background, plastic skin, beautification filters, anime style, CGI rendering, inconsistent lighting between frames"
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "task": "viral_leak_glowing mysterious briefcase",
+  "output": {
+    "type": "single_clip",
+    "duration": "6_seconds",
+    "framerate": "24fps_cinematic",
+    "resolution": "1080p",
+    "aspect_ratio": "9:16"
+  },
+  "cinematography": {
+    "camera_motion": "handheld_shaky_cam_first_person_perspective",
+    "lens_and_focus": "wide_angle_smartphone_lens",
+    "simulation": {
+      "motion_blur": "natural_180_degree_shutter",
+      "noise_over_time": "digital_sensor_noise_iso_6400"
+    }
+  },
+  "subject": {
+    "type": "evidence_artifact",
+    "appearance": "A grainy, high-contrast video of a glowing mysterious briefcase sitting on a abandoned warehouse office. A small 'Parallel' logo sticker is partially visible.",
+    "movement_timeline": [
+      {
+        "timeframe": "0s-3s",
+        "action": "Camera shakes slightly as someone's hand reaches out to touch the artifact."
+      },
+      {
+        "timeframe": "3s-6s",
+        "action": "Lighting flickers as if from a faulty overhead light. The hand quickly pulls back."
+      }
+    ]
+  },
+  "environment": {
+    "location": "A dimly lit, messy abandoned warehouse office room with blueprint papers on the walls.",
+    "lighting": {
+      "type": "flickering_cold_led",
+      "changes_over_time": "Rapid flickering at 4.5 seconds."
+    }
+  },
+  "structural_preservation": {
+    "temporal_consistency": [
+      "The artifact geometry must remain rigid",
+      "Hand movement must follow human kinetics",
+      "Lighting flicker must affect all surfaces consistently"
+    ]
+  },
+  "negative_prompt": {
+    "forbidden_elements": [
+      "morphing, melting, extra limbs, plastic skin, CGI look, bright saturated colors, steady camera"
+    ]
+  }
+}

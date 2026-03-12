@@ -1,0 +1,26 @@
+[0][TITRE]
+[TITRE] : L'Interrogatoire Croisé
+
+[1][ETAPE NARRATIVE]
+[AMORCE_NARRATIVE] : Les néons du poste clignotent. Vous êtes menotté à une chaise. L'inspecteur Varga entre avec un dossier épais. "On vous a trouvé près de la zone interdite. Vous dites que vous étiez en rendez-vous ?"
+
+[2][ETAPE NARRATIVE]
+[SMALL_TALK] : "Vous savez, dans ce métier, on voit passer beaucoup de menteurs. Mais vous, vous avez l'air... sincère. Un peu trop peut-être."
+
+[3][ETAPE NARRATIVE]
+[ENIGME_EXPLICATION] : Varga sort son téléphone. "On va vérifier votre alibi. Je contacte votre complice... enfin, votre copine. Si vos versions divergent sur un seul détail de votre soirée, vous ne ressortez pas d'ici."
+
+[4][ETAPE_JOUEUR]
+[ENIGME_1] : "Dites-moi : Quel était le nom du dessert que vous avez partagé hier soir ? (Profiteroles)"
+
+[5][ETAPE NARRATIVE]
+[FÉLICITATIONS] : Varga range son téléphone, l'air presque déçu. "Elle a dit exactement la même chose. 'Profiteroles'. On dirait que vous ne mentiez pas."
+
+[6][ETAPE GAME OVER]
+[DEATH_WRONG ANSWER] : Varga tape du poing sur la table. "Elle me parle d'une mousse au chocolat ! Vous vous foutez de moi ? Garde, emmenez-le au bloc C !"
+
+[7][ETAPE GAME OVER]
+[DEATH_TOO_LATE] : "Elle ne répond pas... soit elle vous a déjà oublié, soit elle est complice. Dans les deux cas, vous allez passer un long moment à l'ombre."
+
+[8][N/A]
+[PRÉSENTATION PARALLEL] : Vous avez survécu à l'interrogatoire... pour cette fois. L'expérience continue sur Parallel.

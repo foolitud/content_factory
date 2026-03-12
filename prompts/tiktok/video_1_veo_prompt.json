@@ -1,0 +1,63 @@
+{
+  "task": "vertical_tiktok_video",
+  "output": {
+    "type": "single_clip",
+    "duration": "5s",
+    "aspect_ratio": "9:16"
+  },
+  "cinematography": {
+    "camera_motion": "static tripod shot positioned slightly behind and above the subject",
+    "lens_and_focus": "medium shot, sharp focus on the subject's back and the glowing monitors, shallow depth of field blurring the room slightly",
+    "simulation": {
+      "motion_blur": "natural motion blur on hand movements"
+    }
+  },
+  "subject": {
+    "identity": "young woman with vibrant blue dyed hair tied in a loose bun or ponytail, wearing a casual oversized pastel t-shirt or hoodie",
+    "appearance": {
+      "texture": "realistic hair strands catching the glow from the screens, soft fabric folds on clothing",
+      "physics": "natural subtle movements as she breathes and uses the mouse/keyboard"
+    },
+    "movement_timeline": [
+      {
+        "timeframe": "0s-5s",
+        "action": "Subject is seated in an ergonomic gaming chair, seen from behind. She is actively clicking and typing, engrossed in the screens."
+      }
+    ]
+  },
+  "environment": {
+    "location": "dimly lit bedroom or gaming setup, modern and cozy aesthetic",
+    "background_dynamics": "PC case with glowing bright RGB ring fans visible to the side, soft ring lights or key lights illuminating the scene from the front",
+    "lighting": {
+      "type": "dramatic contrasting light: bright, cool-toned glow emitting from the dual monitors illuminating the subject's silhouette and hair, contrasted with the darker ambient room lighting",
+      "changes_over_time": "screens cast a steady, bright glow"
+    },
+    "details": "Two large monitors display cryptic, text-heavy websites with dark themes and glowing green accents, resembling complex puzzles, decoding interfaces, or hacker-style enigma sites."
+  },
+  "structural_preservation": {
+    "temporal_consistency": [
+      "Monitors remain fixed in space",
+      "RGB lighting effects remain consistent",
+      "Subject's hair color and style do not morph or change",
+      "No spontaneous appearance of objects on the desk"
+    ]
+  },
+  "negative_prompt": {
+    "forbidden_elements": [
+      "morphing",
+      "melting geometry",
+      "anatomy normalization",
+      "unmotivated jitter",
+      "physics-defying fabric",
+      "telekinetic object movement",
+      "plastic skin",
+      "airbrushed texture",
+      "cartoon",
+      "CGI",
+      "extra limbs appearing",
+      "jittery background",
+      "floating screens",
+      "text changing randomly on screens"
+    ]
+  }
+}

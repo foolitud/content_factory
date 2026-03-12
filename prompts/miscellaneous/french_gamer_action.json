@@ -1,0 +1,45 @@
+{
+  "task": "action_shot_playing_mobile_game",
+  "output": {
+    "type": "single_image",
+    "layout": "1x1",
+    "aspect_ratio": "4:5",
+    "resolution": "ultra_high",
+    "camera_style": "professional_dslr_85mm"
+  },
+  "image_quality_simulation": {
+    "sharpness": "tack_sharp_on_eyes",
+    "noise": "clean_digital",
+    "compression_artifacts": false,
+    "dynamic_range": "hdr_capable",
+    "white_balance": "cool_fluorescent",
+    "lens_imperfections": ["shallow depth of field"]
+  },
+  "subject": {
+    "type": "human_portrait",
+    "human_details": {
+      "identity": "23-year-old French girl",
+      "appearance": "realistic facial proportions, visible peach fuzz, slight shiny forehead, biting lower lip in concentration, messy bangs, tapping vigorously on phone screen",
+      "outfit": "tank top and cardigan"
+    }
+  },
+  "environment": {
+    "location": "bedroom interior",
+    "background": "bookshelves and scattered clothes out of focus",
+    "lighting": {
+      "type": "overhead room lighting mixed with window light",
+      "quality": "uneven, realistic, non-studio, everyday documentation style"
+    }
+  },
+  "explicit_restrictions": {
+    "no_professional_retouching": true,
+    "no_studio_lighting": true,
+    "no_ai_beauty_filters": true,
+    "no_high_end_camera_look": false
+  },
+  "negative_prompt": {
+    "forbidden_elements": [
+      "anatomy normalization, body proportion averaging, dataset-average anatomy, beautification filters, skin smoothing, plastic skin, airbrushed texture, stylized realism, editorial fashion proportions"
+    ]
+  }
+}
