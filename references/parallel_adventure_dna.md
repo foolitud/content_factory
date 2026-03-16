@@ -27,6 +27,11 @@ This document serves as the core reference for the Parallel Adventure ecosystem.
 - **Deep Game Logic:** Advanced state machine managing complex logic, variables, and real-world consequences.
 - **Vertically Integrated:** Sovereignty over both creation (Builder) and runtime (Execution).
 
+## 5. Tone of Voice: Chill & Transparent
+- **Philosophy:** Professional but human. Ambitious without being arrogant.
+- **Style:** Conversational, relaxed, and "low-ego".
+- **Keywords:** Humble, transparent, co-creation, building in public.
+
 ---
 
 ## Usage Rule

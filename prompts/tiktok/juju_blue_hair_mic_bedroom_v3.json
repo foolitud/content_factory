@@ -1,0 +1,123 @@
+{
+  "task": "cinematic_tiktok_vertical_clip_gamer_girl_bedroom_speaking",
+
+  "output": {
+    "type": "single_clip",
+    "duration": "5s",
+    "framerate": "24fps_cinematic",
+    "resolution": "1080p",
+    "aspect_ratio": "9:16"
+  },
+
+  "character_bible": {
+    "_description": "Reusable character reference — copy this block into any future prompt to maintain visual consistency.",
+    "name": "Juju",
+    "gender": "female",
+    "age_range": "20-23",
+    "ethnicity": "white European, French",
+    "face": "soft round face with a small upturned nose, light brown eyes with a warm glint, full natural lips with a slight smirk, light freckles across the bridge of the nose, minimal makeup — just a touch of mascara and lip gloss, naturally arched eyebrows",
+    "hair": "short choppy pixie cut dyed vivid electric blue (cobalt-cyan tone), slightly tousled with natural texture, a few strands falling over the forehead, hair shaved shorter on the sides and longer on top",
+    "body_type": "slim petite build, approximately 165cm, narrow shoulders",
+    "skin": "fair skin with warm undertones, natural texture with visible pores, no airbrushing",
+    "signature_look": "casual cozy gamer aesthetic — white ribbed tank top or oversized pastel hoodie, delicate thin gold chain necklace, large over-ear gaming headphones (black with subtle RGB accents)",
+    "vibe": "playful, charismatic, slightly mischievous energy — the kind of girl who laughs mid-sentence and makes eye contact with the camera like she's sharing a secret with you"
+  },
+
+  "subject": {
+    "type": "human_actor",
+    "identity": "Juju — young French woman, 20-23 years old, short choppy electric blue pixie-cut hair (cobalt-cyan tone), soft round face, light brown eyes, small upturned nose, light freckles, fair skin with warm undertones, slim petite build. Wearing a white ribbed tank top and a thin gold chain necklace. Large black over-ear gaming headphones on her head.",
+    "appearance": {
+      "texture": "realistic skin with visible pores and natural imperfections, hair strands catching the ambient light from the microphone glow, soft fabric texture on the tank top, metallic sheen on the gold necklace",
+      "physics": "natural subtle breathing movements, hair strands reacting slightly to head movement, headphone cable swaying gently"
+    },
+    "dialogue": {
+      "spoken_line": "Trying Parallel for the first time, let you know what I'm thinking in the next video",
+      "intention": "She is genuinely hyped — she just discovered something exciting and can't wait to share. The tone is like texting your best friend 'omg you HAVE to try this'. She's teasing her audience with a cliffhanger — she knows they'll want to hear her verdict but she's making them wait. There's a playful power move in the 'next video' — she's building anticipation on purpose.",
+      "delivery": "Fast, upbeat TikTok-creator pace — she rattles through the sentence in about 3 seconds like a natural fast-talker who's excited. NOT slow or deliberate. Think of how a 21-year-old actually talks to her phone camera: quick, breezy, slightly breathless from excitement. She doesn't pause between words — it flows as one energetic burst. Her voice lifts on 'first time' with genuine curiosity, then drops into a confident, teasing tone on 'let you know what I'm thinking' — like she's holding back a spoiler. She finishes 'in the next video' with a cheeky knowing smile, almost daring the viewer to stay tuned."
+    },
+    "movement_timeline": [
+      {
+        "timeframe": "0s-0.5s",
+        "action": "Juju is already mid-energy — she leans into the mic, eyes wide with excitement, eyebrows raised. She takes a quick breath and launches straight into speaking. Her body language is animated from the very first frame."
+      },
+      {
+        "timeframe": "0.5s-2s",
+        "action": "She speaks fast and naturally: 'Trying Parallel for the first time' — her head bobs slightly with the rhythm of her words, lips moving at a quick conversational pace. She gestures quickly with her right hand, palm up, as if presenting something exciting. Her eyes are locked on camera with bright, genuine enthusiasm."
+      },
+      {
+        "timeframe": "2s-3.5s",
+        "action": "Without pausing, she continues 'let you know what I'm thinking' — her expression shifts subtly from excitement to a sly, knowing look. She tilts her chin down slightly, narrows her eyes just a touch — the classic 'I know something you don't' TikTok expression. Her speaking pace stays quick and fluid."
+      },
+      {
+        "timeframe": "3.5s-5s",
+        "action": "She finishes 'in the next video' — her lips curl into a deliberate smirk. She gives a single quick nod to camera like sealing a deal. Then she holds the smirk for a beat, maybe a tiny tongue-in-cheek expression or a quick eyebrow raise — the kind of 'drop the mic' moment that makes people hit follow. Her energy settles into confident stillness."
+      }
+    ]
+  },
+
+  "environment": {
+    "location": "A cozy, dimly-lit bedroom doubling as a streaming/gaming setup. The room feels lived-in and authentic — not a professional studio.",
+    "background_dynamics": "Behind Juju: an unmade bed with dark sheets, a string of fairy lights on the wall emitting soft warm glow, subtle purple-blue LED strip lighting along the ceiling edge, a few posters or tapestries barely visible in the bokeh. A PC tower with RGB fans glows softly to the right.",
+    "lighting": {
+      "type": "Mixed ambient lighting: the red glow from the condenser microphone illuminates her chin and neck from below, cool blue-purple LED ambient light fills the room from behind, a soft key light from a ring light or monitor provides balanced front illumination on her face",
+      "changes_over_time": "Lighting remains consistent throughout the 5s clip with subtle flickering from the monitor screen casting faint dynamic shadows on the right side of her face"
+    },
+    "props": "Large cylindrical USB condenser microphone with glowing red LED base (HyperX QuadCast style) on a desk stand positioned in front of her at chest level, slightly to the left of frame. Desk with a keyboard, mouse, and a single monitor visible at the edge of frame."
+  },
+
+  "cinematography": {
+    "camera_motion": "Very slow gentle push-in toward the subject, starting from a medium shot (waist-up) and ending slightly tighter on a medium close-up (chest-up). Camera is positioned at eye level, directly facing the subject.",
+    "lens_and_focus": "50mm lens equivalent, shallow depth of field (f/1.8) — sharp focus locked on the subject's face and the microphone, background bedroom elements beautifully blurred into soft bokeh with visible light orbs from the fairy lights",
+    "simulation": {
+      "motion_blur": "natural 180-degree shutter motion blur",
+      "noise_over_time": "subtle film grain consistent with low-light handheld footage, slight warmth in the color grade"
+    }
+  },
+
+  "structural_preservation": {
+    "temporal_consistency": [
+      "Blue hair color (cobalt-cyan) must remain exactly the same shade throughout",
+      "Short pixie-cut hairstyle must not change length or shape",
+      "Headphones must remain on her head — no clipping or disappearing",
+      "Microphone position and red LED glow must remain fixed",
+      "Facial features must stay consistent — no morphing between expressions",
+      "Gold necklace must stay visible and not clip through skin",
+      "Background fairy lights must not move or multiply",
+      "Tank top straps and neckline must remain consistent",
+      "Lip movements must match the fast-paced spoken dialogue naturally"
+    ]
+  },
+
+  "negative_prompt": {
+    "forbidden_elements": [
+      "morphing",
+      "melting geometry",
+      "anatomy normalization",
+      "unmotivated jitter",
+      "physics-defying fabric",
+      "telekinetic object movement",
+      "plastic skin",
+      "airbrushed texture",
+      "cartoon",
+      "CGI",
+      "anime style",
+      "extra limbs appearing",
+      "jittery background",
+      "floating objects",
+      "oversaturated colors",
+      "long hair",
+      "blonde hair",
+      "hair color change",
+      "disappearing headphones",
+      "distorted microphone",
+      "duplicate microphones",
+      "text overlays",
+      "watermarks",
+      "frozen lips",
+      "mismatched lip sync",
+      "slow motion speech",
+      "robotic delivery",
+      "stiff facial expressions"
+    ]
+  }
+}

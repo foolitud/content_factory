@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Les Micro-aventures Parallel — Vivez l'aventure en quelques minutes</title>
+  <meta name="description" content="Découvrez les micro-aventures Parallel : des expériences immersives courtes jouées via vos outils de communication habituels. Un avant-goût parfait avant nos grandes aventures.">
+  <link rel="icon" href="https://www.parallel-adventure.com/favicons/favicon-57x57.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* ============================================
+       DESIGN SYSTEM — Parallel Adventure
+       ============================================ */
+    :root {
+      /* Colors */
+      --bg-deep: #0A1014;
+      --bg-primary: #081E22;
+      --bg-elevated: #0D2B30;
+      --bg-card: #0C1E23;
+      --bg-card-hover: #102830;
+      --accent: #DEE9ED;
+      --accent-dim: rgba(222, 233, 237, 0.15);
+      --accent-glow: rgba(222, 233, 237, 0.08);
+      --accent-glow-strong: rgba(222, 233, 237, 0.25);
+      --text-primary: #F0F4F6;
+      --text-secondary: #8FA3AD;
+      --text-muted: #5A7280;
+      --cta-bg: #DEE9ED;
+      --cta-text: #0B1114;
+      --cta-hover: #FFFFFF;
+      --badge-bg: rgba(222, 233, 237, 0.1);
+      --badge-border: rgba(222, 233, 237, 0.2);
+      --overlay: rgba(5, 8, 10, 0.85);
+      --border-subtle: rgba(222, 233, 237, 0.08);
+      --border-card: rgba(222, 233, 237, 0.12);
+
+      /* Typography */
+      --font-display: 'Orbitron', ui-sans-serif, system-ui, sans-serif;
+      --font-body: 'Inter', ui-sans-serif, system-ui, sans-serif;
+
+      /* Spacing */
+      --space-xs: 4px;
+      --space-sm: 8px;
+      --space-md: 16px;
+      --space-lg: 24px;
+      --space-xl: 32px;
+      --space-2xl: 48px;
+      --space-3xl: 64px;
+      --space-4xl: 96px;
+
+      /* Radius */
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --radius-xl: 20px;
+
+      /* Transitions */
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+      --duration-fast: 150ms;
+      --duration-normal: 250ms;
+      --duration-slow: 400ms;
+    }
+
+    /* ============================================
+       RESET & BASE
+       ============================================ */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--bg-deep);
+      color: var(--text-primary);
+      line-height: 1.6;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    /* Background ambient effect */
+    body::before {
+      content: '';
+      position: fixed;
+      top: -20%;
+      left: -10%;
+      width: 60%;
+      height: 60%;
+      background: radial-gradient(ellipse, rgba(222, 233, 237, 0.03) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      bottom: -30%;
+      right: -15%;
+      width: 70%;
+      height: 70%;
+      background: radial-gradient(ellipse, rgba(8, 30, 34, 0.4) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ============================================
+       LAYOUT
+       ============================================ */
+    .page-wrapper {
+      position: relative;
+      z-index: 1;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: var(--space-2xl) var(--space-lg);
+    }
+
+    /* ============================================
+       NAVIGATION BAR
+       ============================================ */
+    .nav-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: var(--space-3xl);
+    }
+
+    .nav-logo {
+      height: 32px;
+      opacity: 0.9;
+      transition: opacity var(--duration-normal) var(--ease-out);
+    }
+
+    .nav-logo:hover {
+      opacity: 1;
+    }
+
+    .nav-back {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-sm);
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      transition: color var(--duration-normal) var(--ease-out);
+      cursor: pointer;
+    }
+
+    .nav-back:hover {
+      color: var(--accent);
+    }
+
+    .nav-back svg {
+      width: 16px;
+      height: 16px;
+      transition: transform var(--duration-normal) var(--ease-out);
+    }
+
+    .nav-back:hover svg {
+      transform: translateX(-3px);
+    }
+
+    /* ============================================
+       HERO HEADER
+       ============================================ */
+    .hero-header {
+      text-align: center;
+      margin-bottom: var(--space-4xl);
+    }
+
+    .hero-label {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-sm);
+      padding: var(--space-sm) var(--space-md);
+      background: var(--badge-bg);
+      border: 1px solid var(--badge-border);
+      border-radius: 100px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: var(--space-xl);
+    }
+
+    .hero-label .dot {
+      width: 6px;
+      height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+      animation: pulse-dot 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 0.4; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.3); }
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 5vw, 56px);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      color: var(--text-primary);
+      margin-bottom: var(--space-lg);
+      text-shadow: 0 0 80px rgba(222, 233, 237, 0.08);
+    }
+
+    .hero-subtitle {
+      font-size: clamp(16px, 2vw, 20px);
+      color: var(--text-secondary);
+      max-width: 680px;
+      margin: 0 auto var(--space-md);
+      font-weight: 300;
+      line-height: 1.7;
+    }
+
+    .hero-concept {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-sm);
+      font-size: 14px;
+      color: var(--text-muted);
+      font-style: italic;
+      max-width: 600px;
+      margin: 0 auto;
+      padding-top: var(--space-md);
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .hero-concept svg {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+      opacity: 0.6;
+    }
+
+    /* ============================================
+       SECTION LABELS
+       ============================================ */
+    .section-label {
+      font-family: var(--font-display);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: var(--space-lg);
+    }
+
+    /* ============================================
+       FEATURED ADVENTURE CARD
+       ============================================ */
+    .featured-section {
+      margin-bottom: var(--space-4xl);
+    }
+
+    .featured-card {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 0;
+      background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-elevated) 100%);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      position: relative;
+      transition: border-color var(--duration-slow) var(--ease-out),
+                  box-shadow var(--duration-slow) var(--ease-out);
+    }
+
+    .featured-card::before {
+      content: '';
+      position: absolute;
+      inset: -1px;
+      border-radius: var(--radius-xl);
+      padding: 1px;
+      background: linear-gradient(135deg, rgba(222, 233, 237, 0.15), transparent 50%, rgba(222, 233, 237, 0.05));
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .featured-card:hover {
+      border-color: rgba(222, 233, 237, 0.2);
+      box-shadow: 0 0 60px rgba(222, 233, 237, 0.06),
+                  0 24px 48px rgba(0, 0, 0, 0.4);
+    }
+
+    .featured-image-wrapper {
+      position: relative;
+      overflow: hidden;
+      min-height: 380px;
+    }
+
+    .featured-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--duration-slow) var(--ease-out);
+    }
+
+    .featured-card:hover .featured-image {
+      transform: scale(1.03);
+    }
+
+    .featured-image-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, transparent 60%, var(--bg-card) 100%);
+      pointer-events: none;
+    }
+
+    .featured-content {
+      padding: var(--space-2xl) var(--space-2xl) var(--space-2xl) var(--space-xl);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: var(--space-lg);
+    }
+
+    .featured-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      width: fit-content;
+      padding: 6px 14px;
+      background: linear-gradient(135deg, rgba(222, 233, 237, 0.12), rgba(222, 233, 237, 0.04));
+      border: 1px solid var(--badge-border);
+      border-radius: 100px;
+      font-family: var(--font-display);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .featured-badge svg {
+      width: 12px;
+      height: 12px;
+    }
+
+    .featured-title {
+      font-family: var(--font-display);
+      font-size: clamp(24px, 3vw, 32px);
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+    }
+
+    .featured-description {
+      font-size: 16px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    .featured-meta {
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+    }
+
+    .meta-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .meta-item svg {
+      width: 16px;
+      height: 16px;
+      opacity: 0.7;
+    }
+
+    .btn-play {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-sm);
+      width: fit-content;
+      padding: 14px 36px;
+      background: var(--cta-bg);
+      color: var(--cta-text);
+      border: none;
+      border-radius: var(--radius-md);
+      font-family: var(--font-display);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all var(--duration-normal) var(--ease-out);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-play::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.15) 100%);
+      opacity: 0;
+      transition: opacity var(--duration-normal) var(--ease-out);
+    }
+
+    .btn-play:hover {
+      background: var(--cta-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(222, 233, 237, 0.2),
+                  0 0 60px rgba(222, 233, 237, 0.1);
+    }
+
+    .btn-play:hover::before {
+      opacity: 1;
+    }
+
+    .btn-play:active {
+      transform: translateY(0);
+    }
+
+    .btn-play svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    /* ============================================
+       ADVENTURES GRID
+       ============================================ */
+    .grid-section {
+      margin-bottom: var(--space-4xl);
+    }
+
+    .adventures-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-lg);
+    }
+
+    .adventure-card {
+      background: linear-gradient(180deg, var(--bg-card) 0%, rgba(8, 30, 34, 0.6) 100%);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: all var(--duration-slow) var(--ease-out);
+      cursor: default;
+    }
+
+    .adventure-card:hover {
+      border-color: var(--border-card);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3),
+                  0 0 40px rgba(222, 233, 237, 0.04);
+    }
+
+    .card-image-wrapper {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+    }
+
+    .card-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--duration-slow) var(--ease-out);
+    }
+
+    .adventure-card:hover .card-image {
+      transform: scale(1.05);
+    }
+
+    .card-image-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 40%, var(--bg-card) 100%);
+      pointer-events: none;
+    }
+
+    .card-content {
+      padding: var(--space-md) var(--space-lg) var(--space-lg);
+    }
+
+    .card-title {
+      font-family: var(--font-display);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: var(--space-sm);
+      line-height: 1.3;
+    }
+
+    .card-description {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: var(--space-md);
+      font-weight: 300;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .card-meta {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 12px;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .card-meta svg {
+      width: 14px;
+      height: 14px;
+      opacity: 0.6;
+    }
+
+    .btn-play-sm {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 20px;
+      background: transparent;
+      color: var(--accent);
+      border: 1px solid var(--badge-border);
+      border-radius: var(--radius-sm);
+      font-family: var(--font-display);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all var(--duration-normal) var(--ease-out);
+    }
+
+    .btn-play-sm:hover {
+      background: var(--accent-dim);
+      border-color: var(--accent);
+      box-shadow: 0 0 20px rgba(222, 233, 237, 0.1);
+    }
+
+    .btn-play-sm svg {
+      width: 12px;
+      height: 12px;
+    }
+
+    /* ============================================
+       COMING SOON CARD
+       ============================================ */
+    .coming-soon-card {
+      background: linear-gradient(180deg, var(--bg-card) 0%, rgba(8, 30, 34, 0.6) 100%);
+      border: 1px dashed rgba(222, 233, 237, 0.12);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 280px;
+      text-align: center;
+      padding: var(--space-xl);
+      gap: var(--space-md);
+    }
+
+    .coming-soon-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--accent-dim);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .coming-soon-icon svg {
+      width: 24px;
+      height: 24px;
+      color: var(--text-muted);
+    }
+
+    .coming-soon-title {
+      font-family: var(--font-display);
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+    }
+
+    .coming-soon-text {
+      font-size: 13px;
+      color: var(--text-muted);
+      opacity: 0.6;
+    }
+
+    /* ============================================
+       MODAL
+       ============================================ */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: var(--overlay);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--space-lg);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity var(--duration-normal) var(--ease-out),
+                  visibility var(--duration-normal);
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal {
+      background: linear-gradient(180deg, var(--bg-elevated) 0%, var(--bg-primary) 100%);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-xl);
+      width: 100%;
+      max-width: 440px;
+      padding: var(--space-2xl);
+      position: relative;
+      transform: scale(0.95) translateY(10px);
+      transition: transform var(--duration-slow) var(--ease-out);
+      box-shadow: 0 32px 64px rgba(0, 0, 0, 0.5),
+                  0 0 80px rgba(222, 233, 237, 0.04);
+    }
+
+    .modal-overlay.active .modal {
+      transform: scale(1) translateY(0);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: var(--space-md);
+      right: var(--space-md);
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--accent-dim);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all var(--duration-fast) var(--ease-out);
+    }
+
+    .modal-close:hover {
+      background: rgba(222, 233, 237, 0.2);
+      color: var(--text-primary);
+    }
+
+    .modal-close svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .modal-header {
+      margin-bottom: var(--space-xl);
+    }
+
+    .modal-adventure-name {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: var(--space-sm);
+    }
+
+    .modal-adventure-desc {
+      font-size: 14px;
+      color: var(--text-secondary);
+      font-weight: 300;
+    }
+
+    .modal-form {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-md);
+    }
+
+    .form-label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: var(--space-xs);
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 14px 18px;
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-md);
+      color: var(--text-primary);
+      font-family: var(--font-body);
+      font-size: 15px;
+      font-weight: 400;
+      transition: all var(--duration-normal) var(--ease-out);
+      outline: none;
+    }
+
+    .form-input::placeholder {
+      color: var(--text-muted);
+    }
+
+    .form-input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(222, 233, 237, 0.08);
+    }
+
+    .btn-launch {
+      width: 100%;
+      padding: 16px;
+      background: var(--cta-bg);
+      color: var(--cta-text);
+      border: none;
+      border-radius: var(--radius-md);
+      font-family: var(--font-display);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all var(--duration-normal) var(--ease-out);
+      margin-top: var(--space-sm);
+    }
+
+    .btn-launch:hover {
+      background: var(--cta-hover);
+      box-shadow: 0 8px 32px rgba(222, 233, 237, 0.15);
+      transform: translateY(-1px);
+    }
+
+    .btn-launch:active {
+      transform: translateY(0);
+    }
+
+    /* ============================================
+       FOOTER
+       ============================================ */
+    .page-footer {
+      text-align: center;
+      padding-top: var(--space-2xl);
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .footer-logo {
+      height: 24px;
+      opacity: 0.5;
+      margin-bottom: var(--space-md);
+    }
+
+    .footer-text {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .footer-link {
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color var(--duration-fast);
+    }
+
+    .footer-link:hover {
+      color: var(--accent);
+    }
+
+    /* ============================================
+       RESPONSIVE
+       ============================================ */
+    @media (max-width: 1024px) {
+      .featured-card {
+        grid-template-columns: 1fr;
+      }
+
+      .featured-image-wrapper {
+        min-height: 280px;
+        max-height: 320px;
+      }
+
+      .featured-image-overlay {
+        background: linear-gradient(180deg, transparent 50%, var(--bg-card) 100%);
+      }
+
+      .featured-content {
+        padding: var(--space-xl);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .page-wrapper {
+        padding: var(--space-xl) var(--space-md);
+      }
+
+      .adventures-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+      }
+
+      .hero-title {
+        font-size: 28px;
+      }
+
+      .featured-title {
+        font-size: 22px;
+      }
+
+      .nav-bar {
+        padding-bottom: var(--space-2xl);
+      }
+
+      .hero-header {
+        margin-bottom: var(--space-3xl);
+      }
+
+      .modal {
+        padding: var(--space-xl);
+      }
+    }
+
+    @media (max-width: 375px) {
+      .hero-title {
+        font-size: 24px;
+      }
+
+      .featured-content {
+        padding: var(--space-md);
+      }
+    }
+
+    /* ============================================
+       REDUCED MOTION
+       ============================================ */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    /* ============================================
+       ANIMATIONS
+       ============================================ */
+    @keyframes fade-in-up {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-in {
+      animation: fade-in-up 0.6s var(--ease-out) both;
+    }
+
+    .animate-in:nth-child(1) { animation-delay: 0.05s; }
+    .animate-in:nth-child(2) { animation-delay: 0.15s; }
+    .animate-in:nth-child(3) { animation-delay: 0.25s; }
+  </style>
+</head>
+<body>
+
+  <div class="page-wrapper">
+
+    <!-- NAV -->
+    <nav class="nav-bar" aria-label="Navigation principale">
+      <a href="https://www.parallel-adventure.com" aria-label="Retour à Parallel Adventure">
+        <img src="https://www.parallel-adventure.com/logos/logo.svg" alt="Parallel Adventure" class="nav-logo">
+      </a>
+      <a href="https://www.parallel-adventure.com" class="nav-back">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/></svg>
+        Retour au site
+      </a>
+    </nav>
+
+    <!-- HERO HEADER -->
+    <header class="hero-header">
+      <div class="hero-label">
+        <span class="dot"></span>
+        Expériences courtes
+      </div>
+      <h1 class="hero-title">Les Micro-aventures Parallel</h1>
+      <p class="hero-subtitle">Un parfait avant-goût pour vous initier au concept avant de plonger dans nos aventures de plusieurs jours.</p>
+      <p class="hero-concept">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"/></svg>
+        Pas de boîtes de jeux, pas de CD, vous jouez via vos outils de communication habituels, en parallèle de votre vie.
+      </p>
+    </header>
+
+    <!-- FEATURED ADVENTURE -->
+    <section class="featured-section" aria-label="Aventure à l'honneur">
+      <p class="section-label">✦ À l'honneur</p>
+      <div class="featured-card" id="featured-card">
+        <div class="featured-image-wrapper">
+          <img
+            src="../aventures/micro-aventures/l-interrogatoire-croise/l-interrogatoire-croise_illustration.png"
+            alt="Scène d'interrogatoire sombre avec des menottes sur une table métallique"
+            class="featured-image"
+            loading="eager"
+          >
+          <div class="featured-image-overlay"></div>
+        </div>
+        <div class="featured-content">
+          <span class="featured-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/></svg>
+            Coup de cœur
+          </span>
+          <h2 class="featured-title">L'Interrogatoire Fatal</h2>
+          <p class="featured-description">Elle est votre seule chance de liberté, ne la laissez pas vous trahir. Un interrogatoire à deux où chaque réponse compte — vos versions doivent concorder, ou c'est la fin.</p>
+          <div class="featured-meta">
+            <span class="meta-item">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"/></svg>
+              2 joueurs
+            </span>
+            <span class="meta-item">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              ~10 min
+            </span>
+          </div>
+          <button
+            class="btn-play"
+            onclick="openModal('L\'Interrogatoire Fatal', 'Coordonnez vos réponses avec votre complice. Un seul détail qui diverge et c\'est fini.')"
+            id="btn-play-featured"
+            aria-label="Jouer L'Interrogatoire Fatal"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            Jouer
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ALL ADVENTURES GRID -->
+    <section class="grid-section" aria-label="Toutes les micro-aventures">
+      <p class="section-label">Toutes les micro-aventures</p>
+      <div class="adventures-grid">
+
+        <!-- Card 1 - L'Interrogatoire -->
+        <article class="adventure-card animate-in">
+          <div class="card-image-wrapper">
+            <img
+              src="../aventures/micro-aventures/l-interrogatoire-croise/l-interrogatoire-croise_illustration.png"
+              alt="Scène d'interrogatoire"
+              class="card-image"
+              loading="lazy"
+            >
+            <div class="card-image-overlay"></div>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">L'Interrogatoire Fatal</h3>
+            <p class="card-description">Elle est votre seule chance de liberté, ne la laissez pas vous trahir.</p>
+            <div class="card-footer">
+              <span class="card-meta">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"/></svg>
+                2 joueurs
+              </span>
+              <button
+                class="btn-play-sm"
+                onclick="openModal('L\'Interrogatoire Fatal', 'Coordonnez vos réponses avec votre complice.')"
+                aria-label="Jouer L'Interrogatoire Fatal"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                Jouer
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Coming Soon 1 -->
+        <div class="coming-soon-card animate-in">
+          <div class="coming-soon-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"/></svg>
+          </div>
+          <p class="coming-soon-title">Bientôt disponible</p>
+          <p class="coming-soon-text">Nouvelle aventure en préparation…</p>
+        </div>
+
+        <!-- Coming Soon 2 -->
+        <div class="coming-soon-card animate-in">
+          <div class="coming-soon-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"/></svg>
+          </div>
+          <p class="coming-soon-title">Bientôt disponible</p>
+          <p class="coming-soon-text">Nouvelle aventure en préparation…</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="page-footer">
+      <img src="https://www.parallel-adventure.com/logos/logo.svg" alt="Parallel Adventure" class="footer-logo">
+      <p class="footer-text">
+        © 2026 <a href="https://www.parallel-adventure.com" class="footer-link">Parallel Adventure</a> — L'aventure commence ici.
+      </p>
+    </footer>
+
+  </div>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="play-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal()" aria-label="Fermer" id="modal-close-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+      <div class="modal-header">
+        <h3 class="modal-adventure-name" id="modal-title">—</h3>
+        <p class="modal-adventure-desc" id="modal-desc">—</p>
+      </div>
+      <form class="modal-form" onsubmit="handleLaunch(event)" id="modal-form">
+        <div>
+          <label class="form-label" for="contact-input">Numéro de téléphone ou email</label>
+          <input
+            type="text"
+            class="form-input"
+            id="contact-input"
+            placeholder="06 12 34 56 78 ou votre@email.com"
+            required
+            autocomplete="tel"
+          >
+        </div>
+        <button type="submit" class="btn-launch" id="btn-launch">
+          Lancer la partie
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // ============================================
+    // MODAL LOGIC
+    // ============================================
+    const modal = document.getElementById('play-modal');
+    const modalTitle = document.getElementById('modal-title');
+    const modalDesc = document.getElementById('modal-desc');
+    const contactInput = document.getElementById('contact-input');
+
+    function openModal(title, desc) {
+      modalTitle.textContent = title;
+      modalDesc.textContent = desc;
+      modal.classList.add('active');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      // Focus the input after animation
+      setTimeout(() => contactInput.focus(), 300);
+    }
+
+    function closeModal() {
+      modal.classList.remove('active');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      contactInput.value = '';
+    }
+
+    function handleLaunch(e) {
+      e.preventDefault();
+      const value = contactInput.value.trim();
+      if (!value) return;
+
+      const btn = document.getElementById('btn-launch');
+      btn.textContent = 'Partie lancée ! 🎮';
+      btn.style.background = '#2ECC71';
+      btn.disabled = true;
+
+      setTimeout(() => {
+        closeModal();
+        btn.textContent = 'Lancer la partie';
+        btn.style.background = '';
+        btn.disabled = false;
+      }, 2000);
+    }
+
+    // Close on overlay click
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    // Close on Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('active')) {
+        closeModal();
+      }
+    });
+  </script>
+
+</body>
+</html>

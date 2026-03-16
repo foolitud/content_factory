@@ -7,7 +7,7 @@ Bienvenue dans le dépôt de la **Content Factory**. Ce projet est une usine à 
 Le projet est organisé de manière modulaire :
 
 - **`aventures/`** : Contient les scripts et les données des différentes aventures générées (par ex: *l-interrogatoire-croise*).
-- **`skills/`** : Le cœur de l'usine. Chaque dossier est un "Skill" (compétence) spécifique :
+- **`.agents/skills/`** : Le cœur de l'usine. Chaque dossier est un "Skill" (compétence) spécifique :
     - `github` : Interaction avec GitHub via la CLI `gh`.
     - `video_generation` : Workflow pour générer des vidéos avec des modèles comme Kling ou Veo.
     - `micro-aventures-parallel` : Génération de récits interactifs.
