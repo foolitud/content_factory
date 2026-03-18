@@ -11,3 +11,25 @@ build/
 .turbo/
 .vercel/
 *.log
+
+# Generated content
+images/*
+!images/.gitkeep
+videos/*
+!videos/.gitkeep
+
+# Broad media patterns
+**/*.mp4
+**/*.mov
+**/*.png
+**/*.jpg
+**/*.jpeg
+**/*.webp
+
+# Local development & IDEs
+.vscode/
+.idea/
+.history/
+*.tmp
+*.temp
+.cache/
