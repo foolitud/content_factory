@@ -21,7 +21,7 @@ Le projet est organisé de manière modulaire :
 
 1. **Prérequis** :
    - Python 3.10+
-   - GitHub CLI (`gh`)
+   - GitHub CLI (`gh`) *(Facultatif si vous n'avez pas les droits administrateur)*
    - Un environnement virtuel (`.venv`)
 
 2. **Configuration** :
@@ -35,13 +35,16 @@ Ce projet est configuré pour ne **jamais** uploader de données sensibles grâc
 - Les fichiers de credentials JSON
 - Les environnements virtuels localement installés
 
-## 🐙 Utilisation de la CLI GitHub
+## 🐙 Utilisation de Git & GitHub
 
-Ce projet utilise massivement le skill `github`. Vous pouvez utiliser des commandes comme :
+Ce projet est conçu pour interagir avec GitHub. Si vous avez les droits administrateur, l'utilisation du skill `github` (basé sur la CLI `gh`) est recommandée pour les PRs et les issues :
+
 ```bash
 gh repo view     # Voir l'état du dépôt
 gh issue list    # Lister les tickets en cours
 ```
+
+**Note importante :** Si vous travaillez dans un environnement sans droits administrateur (où `gh` ne peut pas être installé), utilisez directement les commandes `git` standards pour le versionnement.
 
 ---
 *Généré avec ❤️ par la Content Factory.*
