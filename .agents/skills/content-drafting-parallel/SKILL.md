@@ -20,6 +20,45 @@ All social media post drafts and content related to marketing campaigns MUST be 
 
 Use descriptive filenames like `social_media_drafts_[month]_[topic].md`.
 
+## Working with YouTube Videos
+
+When creating content (LinkedIn posts, newsletters, blog posts, etc.) based on a YouTube video, follow this process to extract the transcript before drafting.
+
+### Step 1 — Extract the Transcript with yt-dlp
+
+Run the following command from within the workspace directory (e.g., `/Users/loloamoravain/antigravity/content_factory`). **Do NOT use `/tmp/` as the output path** — it is outside the workspace and will cause a permissions error.
+
+```bash
+yt-dlp --write-auto-sub --sub-lang fr --skip-download --sub-format vtt -o "transcript_yt" "https://www.youtube.com/watch?v=VIDEO_ID"
+```
+
+- Adjust `--sub-lang` to `en` for English videos, `fr` for French videos.
+- This creates a file named `transcript_yt.fr.vtt` (or `.en.vtt`) in the current directory.
+
+### Step 2 — Read and Parse the VTT File
+
+Use `view_file` to read the generated `.vtt` file. The VTT format includes timestamps and repeated lines — extract only the unique spoken text by reading the lines that don't contain `-->` or HTML tags.
+
+### Step 3 — Clean Up
+
+**Delete the VTT file immediately after reading it** — it is a temporary file and should not be committed to the repo:
+
+```bash
+rm /path/to/transcript_yt.fr.vtt
+```
+
+### Step 4 — Draft Content
+
+Use the cleaned transcript to understand:
+- The core message and tone of the video
+- Key talking points to highlight
+- Quotes or phrasing to borrow directly
+
+> [!IMPORTANT]
+> All content for Parallel Adventure must be written in **English**, regardless of the video's original language.
+
+---
+
 ## Content Type Templates
 
 ### Blog Post Structure

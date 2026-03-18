@@ -132,3 +132,28 @@ It’s a lot of work, but we’re having a blast. If you’re curious about any 
 **CTA:** Which of these sounds the most interesting to you? Let’s chat in the comments.
 
 **Hashtags:** #StartupRoadmap #TechStack #ParallelAdventure #Innovation #GameDev
+
+---
+
+## Post 7: We're on YouTube Now 👀🧳 [LINKEDIN — Channel Launch]
+
+**Hook:** We just launched our YouTube channel. Not to broadcast. To build Parallel with you.
+
+**Body:**
+
+We build games. But without a console. Without an app. Without a screen.
+
+Our adventures play out over WhatsApp, SMS, or even physical mail. You become the hero of a story that unfolds over several days — investigation, comedy, fiction — and your decisions have real consequences. Sometimes, the story takes you somewhere real: a place in your city, a location nearby, a hidden corner of your everyday world.
+
+Somewhere between ARG, video game, and escape room.
+
+We're launching this channel for two reasons:
+
+👉 To show you the behind-the-scenes of what we're building (the tech, the screenwriters, the upcoming adventures)
+👉 And most importantly — to hear from you so we can build this together.
+
+We're a team of 5. Ambitious, but humble. And we genuinely need your perspective to move in the right direction.
+
+**CTA:** The video is live — link in the comments. And if there's something you'd love us to cover in future videos, drop it below. We read everything. 👇
+
+**Hashtags:** #BuildInPublic #ParallelAdventure #ARG #GameDev #StartupLife

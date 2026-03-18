@@ -7,8 +7,9 @@ This document serves as the core reference for the Parallel Adventure ecosystem.
 ## 1. Parallel Adventure: L'Expérience Joueur Grandeur Nature
 **The Player Experience & Catalog.**
 - **Concept:** Players become protagonists of real-life adventures (investigation, fiction, treasure hunts).
-- **Gameplay:** Interaction with NPCs via messages/calls, internet searches, decoding, and real-life location visits or physical mail.
+- **Gameplay:** Interaction with NPCs via messages/calls, internet searches, decoding, physical mail, and real-world location visits. Adventures can take players to actual places in their city — hidden corners, nearby locations — making the story unfold in the real world around them.
 - **Impact:** Decisions have real consequences, affecting character paths and overall success.
+- **Team:** 5 people building this.
 
 ## 2. Parallel Builder: L'Atelier de Création Interactif
 **The Public Creation Tool.**
