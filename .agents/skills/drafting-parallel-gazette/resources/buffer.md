@@ -1,0 +1,2 @@
+- **2026-03-18** : Publication de la première vidéo YouTube de présentation de Parallel Adventure ([Lien](https://www.youtube.com/watch?v=XI-KwMMgVrw)).
+- **2026-03-18** : Tournage d'une nouvelle vidéo "L'Aventure dont VOUS êtes le scénariste". On a reçu Carla, Keewiw et Marie au Studio pour documenter les coulisses de la création de leurs aventures ARG.

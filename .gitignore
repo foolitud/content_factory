@@ -33,3 +33,6 @@ videos/*
 *.tmp
 *.temp
 .cache/
+venv/
+.agents/tmp/
+Youtube/
