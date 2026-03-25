@@ -1,7 +1,0 @@
-yt-dlp
-openai-whisper
-moviepy
-mediapipe
-pandas
-opencv-python
-faster-whisper

@@ -28,7 +28,15 @@ This document serves as the core reference for the Parallel Adventure ecosystem.
 - **Deep Game Logic:** Advanced state machine managing complex logic, variables, and real-world consequences.
 - **Vertically Integrated:** Sovereignty over both creation (Builder) and runtime (Execution).
 
-## 5. Tone of Voice: Chill & Transparent
+## 5. Micro-Aventure Parallel: L'Expérience Interactive Ultra-Courte
+**WhatsApp Native & Quick Engagement.**
+- **Concept:** Une fiction interactive ultra-courte (3 à 5 minutes) jouable exclusivement sur WhatsApp.
+- **Drôle et impactante:** Des situations absurdes, quotidiennes ou périlleuses traitées avec humour et urgence.
+- **Sociale:** Souvent pensée pour être jouée à plusieurs (ex : tester ses amis ou son "crush" via le PNJ).
+- **Un aperçu:** Elle sert de "porte d'entrée" ou de teaser pour l'univers étendu de Parallel et ses aventures au long cours.
+- **Résumé:** Un concentré d'immersion qui transforme une simple discussion WhatsApp en un défi narratif mémorable.
+
+## 6. Tone of Voice: Chill & Transparent
 - **Philosophy:** Professional but human. Ambitious without being arrogant.
 - **Style:** Conversational, relaxed, and "low-ego".
 - **Keywords:** Humble, transparent, co-creation, building in public.
